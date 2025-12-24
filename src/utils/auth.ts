@@ -4,14 +4,14 @@ import { AuthUser, Role } from '../models/User';
 
 const JWT_SECRET = process.env.JWT_SECRET || 'fallback-secret';
 
-export const hashPassword = async (password: string): Promise => {
+export const hashPassword = async (password: string): Promise<string> => {
   return bcrypt.hash(password, 10);
 };
 
 export const comparePassword = async (
   password: string,
   hash: string
-): Promise => {
+): Promise<boolean> => {
   return bcrypt.compare(password, hash);
 };
 

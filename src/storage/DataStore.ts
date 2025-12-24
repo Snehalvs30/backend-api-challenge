@@ -3,9 +3,9 @@ import { User } from '../models/User';
 
 export class DataStore {
   private static instance: DataStore;
-  private reports: Map = new Map();
-  private users: Map = new Map();
-  private attachments: Map = new Map();
+  private reports: Map<string, Report> = new Map();
+  private users: Map<string, User> = new Map();
+  private attachments: Map<string, any> = new Map();
 
   private constructor() {}
 
