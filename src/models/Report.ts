@@ -30,7 +30,7 @@ export interface ReportEntry {
 export interface ReportMetadata {
   department: string;
   confidentialityLevel: 'public' | 'internal' | 'confidential';
-  estimatedReadTime: number; // in minutes
+  estimatedReadTime: number;
   lastReviewedBy?: string;
   lastReviewedAt?: Date;
 }
@@ -43,10 +43,10 @@ export interface Report {
   createdBy: string;
   createdAt: Date;
   updatedAt: Date;
-  version: number; // For optimistic locking
+  version: number;
   entries: ReportEntry[];
   metadata: ReportMetadata;
-  attachments: string[]; // Array of attachment IDs
+  attachments: string[];
 }
 
 export interface CreateReportDTO {
@@ -61,5 +61,5 @@ export interface UpdateReportDTO {
   status?: ReportStatus;
   metadata?: Partial<ReportMetadata>;
   entries?: ReportEntry[];
-  version: number; // Required for optimistic locking
+  version: number;
 }
