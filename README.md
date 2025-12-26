@@ -2,18 +2,18 @@
 
 A production-quality RESTful API built with Node.js and TypeScript for managing reports with file attachments, async processing, and role-based access control.
 
-## 🚀 Features
+##  Features
 
-- ✅ Complete CRUD operations for reports
-- ✅ JWT-based authentication with 3 roles (reader, editor, admin)
-- ✅ File upload with validation and secure signed URLs
-- ✅ Async side effects with retry logic and dead-letter queue
-- ✅ Custom business rules for data validation
-- ✅ Optimistic locking for concurrency control
-- ✅ Comprehensive error handling with structured responses
-- ✅ Request logging and audit trails
+- Complete CRUD operations for reports
+- JWT-based authentication with 3 roles (reader, editor, admin)
+- File upload with validation and secure signed URLs
+- Async side effects with retry logic and dead-letter queue
+- Custom business rules for data validation
+- Optimistic locking for concurrency control
+- Comprehensive error handling with structured responses
+- Request logging and audit trails
 
-## 🛠 Tech Stack
+##  Tech Stack
 
 - **Runtime**: Node.js with TypeScript
 - **Framework**: Express.js
@@ -22,7 +22,7 @@ A production-quality RESTful API built with Node.js and TypeScript for managing 
 - **Data Storage**: In-memory NoSQL (Map-based)
 - **Validation**: Zod + custom validators
 
-## 📦 Installation
+##  Installation
 
 ### Prerequisites
 
@@ -45,7 +45,7 @@ npm run dev
 
 Server will start on `http://localhost:3000`
 
-## 🔐 Authentication
+##  Authentication
 
 All endpoints (except /health) require authentication.
 
@@ -85,9 +85,9 @@ curl -X POST http://localhost:3000/auth/login \
 Authorization: Bearer <token>
 ```
 
-## 📚 API Endpoints
+##  API Endpoints
 
-### 1️⃣ Create Report
+###  Create Report
 
 **POST** `/reports`
 ```bash
@@ -114,7 +114,7 @@ curl -X POST http://localhost:3000/reports \
 
 ---
 
-### 2️⃣ Get Report
+###  Get Report
 
 **GET** `/reports/:id`
 ```bash
@@ -158,7 +158,7 @@ The response includes computed metrics:
 
 ---
 
-### 3️⃣ Update Report
+### Update Report
 
 **PUT** `/reports/:id`
 ```bash
@@ -193,7 +193,7 @@ curl -X PUT http://localhost:3000/reports/{report-id} \
 
 ---
 
-### 4️⃣ Upload Attachment
+###  Upload Attachment
 
 **POST** `/reports/:id/attachment`
 ```bash
@@ -223,7 +223,7 @@ curl -X POST http://localhost:3000/reports/{report-id}/attachment \
 
 ---
 
-## 🔑 Roles & Permissions
+## Roles & Permissions
 
 | Role | Read Reports | Create Reports | Update Reports | Upload Files |
 |------|--------------|----------------|----------------|--------------|
@@ -301,7 +301,7 @@ All errors follow a consistent structure:
 
 ---
 
-## 🏗 Project Structure
+## Project Structure
 ```
 src/
 ├── controllers/        # Request handlers
@@ -328,7 +328,7 @@ src/
 
 ---
 
-## 🚀 Development
+## Development
 ```bash
 # Run in development mode with auto-reload
 npm run dev
@@ -345,7 +345,7 @@ npm run lint
 
 ---
 
-## 📝 Implementation Highlights
+## Implementation Highlights
 
 ### Async Task Queue
 - Exponential backoff retry (2s, 4s, 8s...)
@@ -371,7 +371,7 @@ npm run lint
 
 ---
 
-## 🧪 Testing
+## Testing
 
 ### Quick Test Sequence
 ```bash
@@ -412,12 +412,7 @@ curl -X POST http://localhost:3000/reports/$REPORT_ID/attachment \
 
 ---
 
-## 📄 License
-
-MIT
-
----
-
-## 👤 Author
+## Author- Snehal Shinde
 
 Built as part of a backend engineering challenge demonstrating production-quality API design, TypeScript proficiency, and understanding of distributed systems patterns.
+
